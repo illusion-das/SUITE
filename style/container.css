@@ -1,0 +1,82 @@
+html,
+body {
+  margin: 0;
+
+  font-family: 'SUIT Variable', sans-serif;
+}
+
+app-bar {
+  position: fixed;
+
+  background: #eaeaea5F;
+
+  width: 290px;
+  height: 90px;
+
+  border: 1px solid #8c8c8c50;
+  border-radius: 24px;
+
+  right: 0;
+
+  margin: 24px 24px 0 0;
+
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+
+  filter: drop-shadow(8px 8px 16px #00000044);
+
+  z-index: 5;
+
+  transition: 0.2s ease-in-out;
+}
+
+app-content {
+  position: absolute;
+
+  background: #e0e0e0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.content-focus {
+  transform: scale(107%);
+}
+
+app-content::-webkit-scrollbar {
+  display: none;
+}
+
+app-content iframe {
+  width: 100%;
+  height: 100%;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+iframe::-webkit-scrollbar {
+  display: none;
+}
+
+time-content {
+  position: absolute;
+
+  top: 33%;
+  transform: translateX(-50%);
+
+  right: 0;
+  margin-right: -28px;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  text-align: right;
+
+  filter: drop-shadow(0 0 24px #FFFFFFA0);
+}
