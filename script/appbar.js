@@ -1,4 +1,5 @@
 const appbar = document.getElementById("appbar");
+const appbar_background = document.querySelector("control-center-background");
 let ff_appbar = false;
 
 // 터치 이벤트
@@ -14,14 +15,14 @@ function appbar_event(focus) {
         focus_time = 0;
         focus_interval = setInterval(() => {
             focus_time += 1;
-            if (focus_time > 5 && !ff_appbar) {
+            if (focus_time > 9 && !ff_appbar) {
                 control_center(true);
                 appbar_event(false);
-            } else if (focus_time > 5 && ff_appbar) {
+            } else if (focus_time > 9 && ff_appbar) {
                 control_center(false);
                 appbar_event(false);
             }
-        }, 50);
+        }, 25);
         appbar.classList.add("content-focus");
     } else {
         appbar.classList.remove("content-focus");
@@ -30,7 +31,13 @@ function appbar_event(focus) {
 }
 
 function control_center(shown) {
-    if (shown) appbar.classList.add("control-center");
-    else appbar.classList.remove("control-center");
+    if (shown) { 
+        appbar.classList.add("control-center");
+        appbar_background.classList.add("shown-background");
+    }
+    else {
+        appbar.classList.remove("control-center");
+        appbar_background.classList.remove("shown-background");
+    }
     ff_appbar = shown;
 }
