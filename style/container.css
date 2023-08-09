@@ -208,7 +208,7 @@ aod-datetime {
   font-size: 128px;
   font-weight: 800;
 
-  opacity: 1.0;
+  opacity: 0.0;
 
   transition: 0.4s ease-in-out;
   pointer-events: none;
@@ -289,8 +289,46 @@ dock-time {
   font-size: 24px;
   font-weight: 500;
   position: absolute;
-  top: 29%;
+  top: 30%;
   right: 0;
   margin-right: 30px;
   opacity: 0.7;
+}
+
+goto-aod {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-size: 34px 34px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../src/AOD.png");
+
+  top: 18%;
+  left: 12px;
+
+  opacity: 0.6;
+
+  transition: 0.24s ease-in;
+  border-radius: 50%;
+
+  z-index: 10;
+}
+
+goto-aod:hover {
+  opacity: 1.0;
+  background-size: 42px 42px;
+}
+
+.to-aod {
+  opacity: 1.0;
+  background-size: 42px 42px;
+  background-image: none;
+  background: #5756ce;
+  transform: scale(5000%) translateX(10%);
+  transition: 0.5s ease-in-out;
+}
+
+.black-aod {
+  background: #000000;
 }

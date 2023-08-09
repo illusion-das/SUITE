@@ -1,5 +1,9 @@
 const aod = document.querySelector("aod-screen");
 
+setTimeout(() => {
+    document.querySelector("aod-datetime").classList.add("fade");
+}, 400);
+
 aod.addEventListener("touchstart", () => { focus_on(true) })
 aod.addEventListener("touchend", () => { focus_on(false) })
 
