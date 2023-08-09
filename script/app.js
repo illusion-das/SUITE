@@ -1,0 +1,1 @@
+document.querySelector("app-main").classList.add("fade");

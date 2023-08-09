@@ -254,3 +254,43 @@ aod-open-event {
   transform: translate(-50%, -50%) scale(3000%);
   filter: blur(12px);
 }
+
+app-main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #eaeaea;
+
+  overflow: hidden;
+  opacity: 0.0;
+  transition: 0.7s ease-out;
+}
+
+.fade {
+  opacity: 1.0;
+}
+
+dock-ui {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  background: #FFFFFF;
+
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+
+  border: 1px solid #0000004A;
+
+  bottom: 0;
+}
+
+dock-time {
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+  position: absolute;
+  top: 29%;
+  right: 0;
+  margin-right: 30px;
+  opacity: 0.7;
+}

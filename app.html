@@ -11,21 +11,12 @@
 </head>
 
 <body>
-  <app-bar id="appbar">
-    <content-button>
-      <back-button onclick="location.href = `aod.html`"></back-button>
-      <home-button></home-button>
-      <more-button></more-button>
-    </content-button>
-    <time-content id="datetime"></time-content>
-  </app-bar>
-
-  <app-content>
-    <control-center-background></control-center-background>
-    <iframe frameborder="0" id="webkit" src=""></iframe>
-  </app-content>
-
-  <script src="./script/appbar.js"></script>
+  <app-main>
+    <dock-ui>
+      <dock-time id="datetime"></dock-time>
+    </dock-ui>
+  </app-main>
+  <script src="./script/app.js"></script>
   <script src="./script/datetime.js"></script>
 </body>
 
