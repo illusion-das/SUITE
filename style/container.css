@@ -11,7 +11,7 @@ app-bar {
   position: fixed;
   background: #eaeaea5F;
 
-  width: 270px;
+  width: 290px;
   height: 70px;
 
   border: 1px solid #8c8c8c50;
@@ -186,4 +186,71 @@ more-button {
 
 back-button:hover, home-button:hover, more-button:hover {
   background-color: #0000003D;
+}
+
+aod-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+
+  overflow: hidden;
+}
+
+aod-datetime {
+  color: #FFF;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 128px;
+  font-weight: 800;
+
+  opacity: 1.0;
+
+  transition: 0.4s ease-in-out;
+  pointer-events: none;
+
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  filter: blur(0px);
+
+  letter-spacing: 0px;
+}
+
+.click-focus aod-datetime {
+  opacity: 0.0;
+  filter: blur(36px);
+  transform: translate(-50%, -50%) scale(75%);
+
+  letter-spacing: -8px;
+}
+
+aod-open-event {
+  width: 64px;
+  height: 64px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+  background: #FFF;
+
+  opacity: 0.0;
+
+  transition: 1.9s;
+  filter: blur(4px);
+}
+
+.click-focus aod-open-event {
+  opacity: 1.0;
+  transform: translate(-50%, -50%) scale(3000%);
+  filter: blur(12px);
 }

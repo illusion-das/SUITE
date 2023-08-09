@@ -4,4 +4,4 @@ setInterval(() => {
     today = new Date();
 
     appbar_datetime.innerHTML = today.toLocaleTimeString().slice(0, -3);
-}, 500);
+}, 250);
