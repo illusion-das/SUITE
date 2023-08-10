@@ -5,6 +5,8 @@ body {
   font-family: 'SUIT Variable', sans-serif;
 
   user-zoom: fixed;
+
+  overflow: hidden;
 }
 
 app-bar {
@@ -198,15 +200,19 @@ aod-screen {
 }
 
 aod-datetime {
-  color: #FFF;
-
+  color: transparent;
+  background-image: url(../src/aod_blur.png);
+  background-clip: text;
+  -webkit-background-clip: text;
+  
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  font-size: 128px;
+  font-size: 150px;
   font-weight: 800;
+  white-space: nowrap;
 
   opacity: 0.0;
 
@@ -218,9 +224,13 @@ aod-datetime {
   -webkit-user-select: none;
   -moz-user-select: none;
 
-  filter: blur(0px);
+  filter: blur(0px) contrast(90%);
 
-  letter-spacing: 0px;
+  letter-spacing: -2px;
+}
+
+aod-screen:hover aod-datetime {
+  opacity: 0.85;
 }
 
 .click-focus aod-datetime {
@@ -242,11 +252,15 @@ aod-open-event {
 
   border-radius: 50%;
   background: #FFF;
+  background-image: url("../src/app_background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   opacity: 0.0;
 
-  transition: 1.9s;
-  filter: blur(4px);
+  transition: 1.7s;
+  filter: blur(8px);
 }
 
 .click-focus aod-open-event {
@@ -260,13 +274,37 @@ app-main {
   height: 100%;
   position: absolute;
   background: #eaeaea;
+  background-image: url(../src/app_background.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 
   overflow: hidden;
-  opacity: 0.0;
-  transition: 0.7s ease-out;
+  opacity: 1.0;
+  transform: scale(250%);
+  transition: 0.5s ease-out;
+
+  filter: blur(56px);
 }
 
+.aodfade {
+  opacity: 0.5;
+}
+
+
 .fade {
+  opacity: 1.0;
+}
+
+
+.fadex {
+  transform: scale(100%);
+  filter: blur(0px);
+  opacity: 1.0;
+}
+
+.fadey {
+  transform: translateY(0%);
   opacity: 1.0;
 }
 
@@ -274,12 +312,21 @@ dock-ui {
   position: absolute;
   width: 100%;
   height: 70px;
-  background: #FFFFFF;
+  background: #FFFFFF70;
+  backdrop-filter: blur(48px);
+  -webkit-backdrop-filter: blur(48px);
 
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
 
   border: 1px solid #0000004A;
+
+  opacity: 0.0;
+
+  transition: 0.2s ease-in-out;
+  transform: translateY(40%);
+
+  z-index: 10;
 
   bottom: 0;
 }
@@ -292,43 +339,61 @@ dock-time {
   top: 30%;
   right: 0;
   margin-right: 30px;
-  opacity: 0.7;
+  opacity: 1.0;
 }
 
 goto-aod {
   position: absolute;
-  width: 48px;
-  height: 48px;
+  width: 34px;
+  height: 34px;
   background-size: 34px 34px;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../src/AOD.png");
 
-  top: 18%;
-  left: 12px;
+  top: 30%;
+  left: 18px;
 
-  opacity: 0.6;
+  opacity: 0.9;
 
-  transition: 0.24s ease-in;
+  transition: 0.5s ease-in;
   border-radius: 50%;
 
   z-index: 10;
-}
 
-goto-aod:hover {
-  opacity: 1.0;
-  background-size: 42px 42px;
+  filter: blur(0px);
 }
 
 .to-aod {
   opacity: 1.0;
-  background-size: 42px 42px;
   background-image: none;
   background: #5756ce;
-  transform: scale(5000%) translateX(10%);
-  transition: 0.5s ease-in-out;
+  transform: scale(9000%);
+  transition: 0.65s ease-in-out;
+  filter: blur(24px);
 }
 
 .black-aod {
   background: #000000;
+}
+
+app-hidder {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #00000000;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+
+  pointer-events: none;
+
+  z-index: 2;
+
+  transition: 0.4s;
+}
+
+.shown-app-hidder {
+  background: #000000A0;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
