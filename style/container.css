@@ -10,7 +10,7 @@ body {
 }
 
 @font-face {
-  font-family: 'GmarketSansMedium';
+  font-family: 'GmarketSans';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -207,7 +207,7 @@ aod-screen {
 }
 
 aod-datetime {
-  font-family: 'GmarketSansMedium';
+  font-family: 'GmarketSans';
   color: transparent;
   background-image: url(../src/aod_blur.png);
   background-clip: text;
