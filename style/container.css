@@ -253,10 +253,10 @@ aod-screen:hover aod-datetime {
 
 .click-focus aod-datetime {
   opacity: 0.0;
-  filter: blur(36px);
-  transform: translate(-50%, -50%) scale(75%);
+  filter: blur(56px);
+  transform: translate(-50%, -50%) scale(70%);
 
-  letter-spacing: -8px;
+  letter-spacing: -36px;
 }
 
 aod-open-event {
@@ -329,18 +329,14 @@ app-main {
 dock-ui {
   position: absolute;
   width: calc(100% - 16px);
+
   height: 70px;
-  background: #FFFFFF30;
-  backdrop-filter: blur(48px);
-  -webkit-backdrop-filter: blur(48px);
 
   margin-left: 8px;
   margin-right: 8px;
   margin-bottom: 8px;
 
   border-radius: 30px;
-
-  border: 1px solid #00000048;
 
   opacity: 0.0;
 
@@ -422,36 +418,48 @@ app-hidder {
 dock-app {
   position: absolute;
   width: 600px;
+
+  border: 1px solid #00000048;
+  border-radius: 30px;
+  padding-left: 14px;
+  padding-right: 14px;
   height: 100%;
+  background: #FFFFFF30;
+  backdrop-filter: blur(48px);
+  -webkit-backdrop-filter: blur(48px);
+
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
+
+  filter: drop-shadow(4px 4px 12px #000000A0);
 }
 
 app-appbox {
   width: 62px;
   height: 62px;
-  background-image: url(../src/appbox.png);
+  background-image: url(../src/appbox_d.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin-top: 4px;
 
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 3px;
+  margin-right: 3px;
 
   filter: drop-shadow(4px 4px 6px #00000040);
-  transition: 0.23s ease-out;
+  transition: 0.3s ease-out;
 }
 
 app-appbox:hover {
   transform: scale(125%) translateY(-25%);
   margin-top: 0px;
-  margin-left: 12px;
-  margin-right: 12px;
-  filter: drop-shadow(4px 4px 8px #00000070);
-
+  margin-left: 18px;
+  margin-right: 18px;
+  width: 63px;
+  height: 63px;
+  filter: drop-shadow(0 0 6px #000000DF);
 }
 
 app-name {
@@ -470,14 +478,18 @@ app-name {
   border-radius: 6px;
   top: 62px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(40%) scale(80%);
+
+  filter: blur(4px);
 
   white-space: nowrap;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in;
 }
 
 app-appbox:hover app-name {
+  transform: translateX(-50%) translateY(0%) scale(100%);
   opacity: 1.0;
+  filter: blur(0px);
 }
 
 .time {
@@ -486,4 +498,8 @@ app-appbox:hover app-name {
 
 .clock {
   background-image: url(../src/appclock.png);
+}
+
+.setting {
+  background-image: url(../src/setting.png);
 }
