@@ -478,7 +478,7 @@ app-name {
   border-radius: 6px;
   top: 62px;
   left: 50%;
-  transform: translateX(-50%) translateY(40%) scale(80%);
+  transform: translateX(-50%) scale(50%);
 
   filter: blur(4px);
 
