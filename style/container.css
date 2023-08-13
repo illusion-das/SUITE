@@ -503,3 +503,15 @@ app-appbox:hover app-name {
 .setting {
   background-image: url(../src/setting.png);
 }
+
+.pomo {
+  background-image: url(../src/apppomo.png);
+}
+
+.ai {
+  background-image: url(../src/appai.png);
+}
+
+.quiz {
+  background-image: url(../src/appquiz.png);
+}
