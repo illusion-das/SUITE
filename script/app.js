@@ -40,3 +40,10 @@ function gotoaod(is){
         ah.classList.remove("shown-app-hidder");
     }
 }
+
+const apps = document.querySelectorAll("app-appbox");
+
+apps.forEach(i => {
+    i.addEventListener("mouseup", () => {i.classList.add("open")} );
+    i.addEventListener("touchend", () => {i.classList.add("open")} )
+});

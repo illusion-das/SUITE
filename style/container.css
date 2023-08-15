@@ -424,7 +424,7 @@ dock-app {
   padding-left: 14px;
   padding-right: 14px;
   height: 100%;
-  background: #FFFFFF30;
+  background: #FFFFFF2A;
   backdrop-filter: blur(48px);
   -webkit-backdrop-filter: blur(48px);
 
@@ -433,7 +433,7 @@ dock-app {
   display: flex;
   justify-content: center;
 
-  filter: drop-shadow(4px 4px 12px #000000A0);
+  filter: drop-shadow(4px 4px 16px #0000007F);
 }
 
 app-appbox {
@@ -453,13 +453,15 @@ app-appbox {
 }
 
 app-appbox:hover {
-  transform: scale(125%) translateY(-25%);
+  transform: scale(135%) translateY(-30%);
   margin-top: 0px;
-  margin-left: 18px;
-  margin-right: 18px;
-  width: 63px;
-  height: 63px;
-  filter: drop-shadow(0 0 6px #000000DF);
+
+  margin-left: 20px;
+  margin-right: 20px;
+
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 0 6px #000000BF);
 }
 
 app-name {
@@ -467,6 +469,7 @@ app-name {
   opacity: 0.0;
   color: #FFF;
   font-size: 14px;
+  font-weight: 500;
   background: #14141470;
   width: auto;
   height: 18px;
@@ -478,7 +481,7 @@ app-name {
   border-radius: 6px;
   top: 62px;
   left: 50%;
-  transform: translateX(-50%) scale(50%);
+  transform: translateX(-50%) scaleX(0%) scaleY(50%);
 
   filter: blur(4px);
 
@@ -487,7 +490,7 @@ app-name {
 }
 
 app-appbox:hover app-name {
-  transform: translateX(-50%) translateY(0%) scale(100%);
+  transform: translateX(-50%) scaleX(100%) scaleY(100%);
   opacity: 1.0;
   filter: blur(0px);
 }
@@ -514,4 +517,51 @@ app-appbox:hover app-name {
 
 .quiz {
   background-image: url(../src/appquiz.png);
+}
+
+@keyframes openevent {
+  0% {
+    margin-top: 0%;
+    transform: scale(100%);
+  }
+
+  30% {
+    margin-top: 5%;
+    transform: scale(70%);
+  }
+
+  50% {
+    margin-top: -15%;
+    transform: scale(140%);
+    filter: blur(0px);
+  }
+  
+  60% {
+    margin-top: -10%;
+    transform: scale(140%);
+    filter: blur(0px);
+  }
+
+  70% {
+    margin-top: -10%;
+    transform: scale(140%);
+    filter: blur(0px); 
+  }
+
+  80% {
+    filter: blur(4px);
+  }
+
+  100% {
+    border-radius: 20px;
+    transform: scale(5000%);
+    z-index: 100;
+    filter: blur(16px);
+  }
+
+}
+
+.open {
+  pointer-events: none;
+  animation: openevent forwards 0.72s ease-out;
 }
