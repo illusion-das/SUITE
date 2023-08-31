@@ -217,7 +217,7 @@ apps:hover {
 }
 
 .icon-mealtable {
-    background-image: url(../src/apptime.png);
+    background-image: url(../src/appmeal.png);
 }
 
 .icon-ai {
@@ -238,6 +238,10 @@ apps:hover {
 
 .icon-setting {
     background-image: url(../src/setting.png);
+}
+
+.icon-notepad {
+    background-image: url(../src/appnotepad.png);
 }
 
 @keyframes openevent {

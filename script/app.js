@@ -44,3 +44,7 @@ apps.forEach(i => {
     i.addEventListener("mouseup", () => {i.classList.add("open")} );
     i.addEventListener("touchend", () => {i.classList.add("open")} )
 });
+
+function openApps(link) {
+    location.href = link;
+}

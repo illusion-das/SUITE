@@ -23,15 +23,24 @@
 
       <dock-item class="item1">
         <app-list>
+          <!--
           <apps class="icon-applib"></apps>
           <apps class="icon-timetable"></apps>
-          <apps class="icon-mealtable"></apps>
-          <apps class="icon-ai"></apps>
-          <apps class="icon-clock"></apps>
+          -->
+          <apps class="icon-mealtable"
+                onclick="openApps(`https://illusion-das.github.io/suite-meal/SUITE-UI-Example-main/UI-Kit/`)"></apps>
+          <apps class="icon-notepad"
+                onclick="openApps(`https://illusion-das.github.io/SUITE-notepad/`)"></apps>
+          <apps class="icon-clock"
+                onclick="openApps(`https://illusion-das.github.io/suite-meal/SUITE-UI-Example-main/UI-Kit/time.html`)"></apps>
+          <apps class="icon-ai"
+                onclick="openApps(`https://lambent-kelpie-b082c4.netlify.app`)"></apps>
+          <!--
           <apps class="icon-pomodoro"></apps>
           <apps class="icon-weather"></apps>
           <apps class="icon-quiz"></apps>
           <apps class="icon-setting"></apps>
+          -->
         </app-list>
       </dock-item>
 
