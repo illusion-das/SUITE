@@ -1,0 +1,295 @@
+
+app-main {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #eaeaea;
+    background-image: url(../src/app_background.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  
+    overflow: hidden;
+    opacity: 1.0;
+    transform: scale(250%);
+    transition: 0.5s ease-out;
+  
+    filter: blur(56px);
+  }
+
+  .fadex {
+    transform: scale(100%);
+    filter: blur(0px);
+    opacity: 1.0;
+  }
+  
+
+control-panel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(500px - 24px);
+    height: calc(100% - 24px);
+    background: #3e3e3e98;
+    right: 0;
+    border-radius: 24px;
+    margin-right: 12px;
+    backdrop-filter: blur(96px);
+    -webkit-backdrop-filter: blur(96px);
+    border: 2px solid #f3f3f31A;
+    filter: drop-shadow(4px 4px 24px #000000cb)
+            drop-shadow(-7px -7px 12px #ffffff0e);
+}
+
+time-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 32px;
+    opacity: 0.9;
+    text-align: center;
+    margin-left: 24px;
+    transition: 0.3s ease-in;
+}
+
+time-background {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    margin-left: -4px;
+    width: 160px;
+    height: 105%;
+    background: linear-gradient(0.25turn, #5485eea8, #8258de00);
+    transition: 0.3s ease-in;
+}
+
+day-text {
+    width: 100%;
+    position: absolute;
+    color: #eaeaea97;
+    font-size: 18px;
+    font-weight: 700;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    margin-right: -145px;
+    transition: 0.3s ease-in;
+}
+
+dayx-text {
+    position: absolute;
+    color: #eaeaea10;
+    font-size: 128px;
+    font-weight: 800;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    right: 0;
+    margin-right: -125px;
+    transition: 0.3s ease-in;
+}
+
+time-hour {
+    font-weight: 700;
+}
+
+time-min {
+    font-weight: 600;
+}
+
+dock-widget {
+    position: absolute;
+    width: calc(100% - 24px);
+    height: 90px;
+    margin-left: 12px;
+    margin-right: 12px;
+    bottom: 0;
+    margin-bottom: -100px;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.2s ease-out;
+}
+
+dock-item {
+    height: 100%;
+    border-radius: 20px;
+    background: #2f2f2f98;
+    backdrop-filter: blur(96px);
+    -webkit-backdrop-filter: blur(96px);
+    border: 2px solid #f3f3f31A;
+    filter: drop-shadow(4px 4px 24px #0000008d)
+            drop-shadow(-8px -8px 12px #ffffff1F);
+
+    margin-left: 12px;
+    margin-right: 12px;
+    transition: 0.3s ease-in-out;
+}
+
+dock-item:hover {
+    filter: drop-shadow(0 0 24px #00000078);
+}
+
+.item1 {
+    width: calc(100% - 24px);
+}
+
+.item2 {
+    width: calc(30% - 24px);
+    overflow: hidden;
+}
+
+.start-aod dayx-text {
+    opacity: 0.0;
+}
+
+.start-aod day-text {
+    opacity: 0.0;
+}
+
+.start-aod time-text {
+    opacity: 0.0;
+}
+
+.start-aod time-background {
+    width: 100%;
+    opacity: 0.2;
+}
+
+.middle-aod time-background {
+    width: 200%;
+    opacity: 1.0;
+    background: black;
+}
+
+.start-aod {
+    transform: scale(45%) translateX(125%) translateY(195%);
+    border-radius: 50%;
+}
+
+.middle-aod {
+    width: 101%;
+    height: 101%;
+    transform: scale(1500%);
+    border: black solid 2px;
+}
+
+
+app-list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+apps {
+    margin-top: 5px;
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 2px;
+    margin-right: 2px;
+    filter: drop-shadow(4px 4px 16px #00000026);
+    transition: 0.22s ease-in-out;
+}
+
+apps:hover {
+    transform: scale(115%);
+}
+
+.icon-applib {
+    background-image: url(../src/appbox.png);
+}
+
+.icon-clock {
+    background-image: url(../src/appclock.png);
+}
+
+.icon-timetable {
+    background-image: url(../src/apptime.png);
+}
+
+.icon-mealtable {
+    background-image: url(../src/appmeal.png);
+}
+
+.icon-ai {
+    background-image: url(../src/appai.png);
+}
+
+.icon-pomodoro {
+    background-image: url(../src/apppomo.png);
+}
+
+.icon-weather {
+    background-image: url(../src/appweather.png);
+}
+
+.icon-quiz {
+    background-image: url(../src/appquiz.png);
+}
+
+.icon-setting {
+    background-image: url(../src/setting.png);
+}
+
+.icon-notepad {
+    background-image: url(../src/appnotepad.png);
+}
+
+@keyframes openevent {
+    0% {
+        margin-top: 0%;
+        transform: scale(100%);
+    }
+
+    30% {
+        margin-top: 5%;
+        transform: scale(70%);
+    }
+
+    50% {
+        margin-top: -15%;
+        transform: scale(140%);
+        filter: blur(0px);
+    }
+
+    60% {
+        margin-top: -10%;
+        transform: scale(140%);
+        filter: blur(0px);
+    }
+
+    70% {
+        margin-top: -10%;
+        transform: scale(140%);
+        filter: blur(0px); 
+    }
+
+    80% {
+        filter: blur(4px);
+    }
+
+    100% {
+        border-radius: 20px;
+        transform: scale(5000%);
+        filter: blur(8px);
+    }
+
+    }
+
+.open {
+    pointer-events: none;
+    animation: openevent forwards 0.72s ease-out;
+}
+
+.dockup {
+    margin-bottom: 24px;
+}

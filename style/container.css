@@ -270,7 +270,7 @@ aod-open-event {
 
   border-radius: 50%;
   background: #FFF;
-  background-image: url("../src/app_background.jpg");
+  background-image: url("../src/app_background.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -285,24 +285,6 @@ aod-open-event {
   opacity: 1.0;
   transform: translate(-50%, -50%) scale(3000%);
   filter: blur(12px);
-}
-
-app-main {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: #eaeaea;
-  background-image: url(../src/app_background.jpg);
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-
-  overflow: hidden;
-  opacity: 1.0;
-  transform: scale(250%);
-  transition: 0.5s ease-out;
-
-  filter: blur(56px);
 }
 
 .aodfade {

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUITE OS</title>
+
+  <link rel="stylesheet" href="./style/container.css">
+  <link rel="stylesheet" href="./style/home.css">
+  <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet"> 
+</head>
+
+<body>
+  <app-main>
+
+    <!--
+    <control-panel></control-panel>
+    -->
+
+
+    <dock-widget>
+
+      <dock-item class="item1">
+        <app-list>
+          <!--
+          <apps class="icon-applib"></apps>
+          <apps class="icon-timetable"></apps>
+          -->
+          <apps class="icon-mealtable"
+                onclick="openApps(`https://illusion-das.github.io/suite-meal/SUITE-UI-Example-main/UI-Kit/meal.html`)"></apps>
+          <apps class="icon-notepad"
+                onclick="openApps(`https://illusion-das.github.io/SUITE-notepad/`)"></apps>
+          <apps class="icon-clock"
+                onclick="openApps(`https://illusion-das.github.io/suite-meal/SUITE-UI-Example-main/UI-Kit/time.html`)"></apps>
+          <apps class="icon-ai"
+                onclick="openApps(`https://lambent-kelpie-b082c4.netlify.app`)"></apps>
+          <!--
+          <apps class="icon-pomodoro"></apps>
+          <apps class="icon-weather"></apps>
+          <apps class="icon-quiz"></apps>
+          <apps class="icon-setting"></apps>
+          -->
+        </app-list>
+      </dock-item>
+
+      <dock-item class="item2">
+          <time-background>
+            <time-text></time-text>
+            <day-text></day-text>
+            <dayx-text></dayx-text>
+          </time-background>
+      </dock-item>
+
+    </dock-widget>
+
+  </app-main>
+
+  <script src="./script/app.js"></script>
+  <script src="./script/datetime.js"></script>
+  <script src="./script/lowkit.js"></script>
+</body>
+
+</html>
